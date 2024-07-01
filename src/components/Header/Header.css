@@ -1,0 +1,7 @@
+.App-header {
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  min-height: 100vh;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
