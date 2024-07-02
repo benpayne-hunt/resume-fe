@@ -1,7 +1,8 @@
 .LinkCluster {
-  max-height: 10vh;
-  max-width: 50vw;
-  min-width: 20vw;
+  max-height: 7.8vh;
+  max-width: 20vw;
+  min-width: 15vw;
   display: flex;
-  justify-content: space-between;
+  align-items: end;
+  justify-content: space-evenly;
 }

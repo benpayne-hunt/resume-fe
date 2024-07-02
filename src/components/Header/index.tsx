@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 
+import ActionButton from '../../widgets/Buttons/ActionButton';
 import LinkCluster from './components/LinkCluster';
+import TextButton from '../../widgets/Buttons/TextButton';
 import Title from './components/Title';
 import './Header.css';
 
@@ -9,9 +11,9 @@ const Header = (): ReactElement => {
     <header className="App-header">
       <Title text="Ben Payne Hunt" />
       <LinkCluster>
-        <button>Home</button>
-        <button>About</button>
-        <button>Contact</button>
+        <TextButton text="Home" onClick={() => console.log('Home')} />
+        <TextButton text="About" onClick={() => console.log('About')} />
+        <ActionButton text="Contact" onClick={() => console.log('Contact')} />
       </LinkCluster>
     </header>
   );
