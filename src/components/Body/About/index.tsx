@@ -23,7 +23,6 @@ const About = (): ReactElement => {
             <h6 className="About-text">
               I'm a Software Engineer with a passion for running effective, collaborative and fun teams that look to deliver value in every pull request we open 💪
             </h6>
-            <h6 className="About-text">Think I could be a good fit? Search a skill to see if it's a match 🚀</h6>
             <SkillsSearch />
           </div>
         </div>

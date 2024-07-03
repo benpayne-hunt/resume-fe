@@ -4,14 +4,15 @@ import './SearchBar.css';
 
 type Props = {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
 }
 
-const SearchBar = ({ onChange }: Props): ReactElement => {
+const SearchBar = ({ onChange, placeholder }: Props): ReactElement => {
   return (
     <div className="SearchBar">
       <input
         type="text"
-        placeholder="Search"
+        placeholder={placeholder}
         onChange={onChange}
       />
     </div>
