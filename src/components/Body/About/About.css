@@ -1,6 +1,60 @@
 .About {
+  margin-top: 25vh;
   margin-left: 5vw;
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.About-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.About-slogan-container {
+  display: flex;
+  margin-left: 8vw;
+}
+
+.About-slogan-1 {
+  display: flex;
+  font-size: calc(20px + 2vmin);
+  color: #000066;
+  padding-right: 1vw;
+}
+
+.About-slogan-2 {
+  display: flex;
+  font-size: calc(20px + 2vmin);
+  color: #6600ff;
+  padding-right: 1vw;
+}
+
+.About-slogan-3 {
+  display: flex;
+  font-size: calc(20px + 2vmin);
+  color: #0000ff;
+  padding-right: 1vw;
+}
+
+.About-greeting {
+  display: flex;
+}
+
+.About-title {
+  display: flex;
+  margin-left: 3vw;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.About-text {
+  display: flex;
+  margin-left: 3vw;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  text-align: left;
+  text-wrap: wrap;
+  min-width: 10vw;
+  max-width: 45vw;
 }
