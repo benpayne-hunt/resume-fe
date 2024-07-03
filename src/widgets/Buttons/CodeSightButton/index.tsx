@@ -2,17 +2,19 @@ import React, { ReactElement, useState } from 'react';
 
 import CodeSightPopup from './components/CodeSightPopup';
 import codeSight from './codeSight.svg';
+import { CodeData } from '../../../types/codeData';
 import './CodeSightButton.css';
 
 type Props = {
-  onClick: () => void;
+  onClick: () => CodeData;
 }
 
 const CodeSightButton = ({ onClick }: Props): ReactElement => {
   const [openPopup, setOpenPopup] = useState(false);
+  const [codeData, setCodeData] = useState<CodeData>({ language: 'tsx', code: '' });
 
   const handleClick = (): void => {
-    onClick();
+    setCodeData(onClick());
     setOpenPopup(!openPopup);
   };
 
@@ -22,7 +24,9 @@ const CodeSightButton = ({ onClick }: Props): ReactElement => {
         <img src={codeSight} alt="code sight" />
       </div>
       {openPopup ?
-        <CodeSightPopup />
+        <CodeSightPopup
+          codeData={codeData}
+        />
       : null}
     </>
   );

@@ -33,3 +33,16 @@
   max-width: 45vw;
   max-height: 0.5vh;
 }
+
+.CodeSightPopup-code {
+  display: flex;
+  margin-left: 2vw;
+  margin-right: 1vw;
+  font-size: calc(7px + 1vmin);
+  color: white;
+  text-align: left;
+  text-wrap: wrap;
+  min-width: 10vw;
+  max-width: 45vw;
+  max-height: 0.5vh;
+}
