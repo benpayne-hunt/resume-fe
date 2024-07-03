@@ -16,10 +16,9 @@
 }
 
 .SearchBar-results {
-  /* display: flex; */
   flex-direction: column;
   width: 100%;
-  max-width: 44vw;
+  max-width: 43vw;
   min-height: 30vh;
   border: 1px solid white;
   border-radius: 0 0 1.5rem 1.5rem;;
