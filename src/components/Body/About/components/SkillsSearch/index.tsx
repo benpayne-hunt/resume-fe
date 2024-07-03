@@ -1,12 +1,17 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, RefObject } from 'react';
 
 import SearchBar from '../../../../../widgets/SearchBar';
 import { Skill } from '../../../../../types/skill';
 import './SkillsSearch.css';
 
-const SkillsSearch = (): ReactElement => {
+type Props = {
+  scrollTo: () => void;
+}
+
+const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>): Skill[] => {
     console.log(event.target.value);
+    scrollTo();
 
     return [{
       name: 'JavaScript',
