@@ -2,14 +2,19 @@ import React, { ReactElement } from 'react';
 
 import './CodeSightPopup.css';
 
-const CodeSightPopup = (): ReactElement => {
+type Props = {
+  title?: string;
+  text?: string;
+  codeBlock?: Object;
+}
+
+const CodeSightPopup = ({ title, text }: Props): ReactElement => {
   return (
     <div className="CodeSightPopup">
-      <h1 className="CodeSightPopup-title">Code Sight</h1>
+      <h1 className="CodeSightPopup-title">{`${title ?? 'Code Sight'}`}</h1>
       <h6 className="CodeSightPopup-text">
-        Use this button to quickly scan through the code of any element on the page 🔍
+        {`${text ?? 'Use this button to quickly scan through the code of any element on the page 🔍'}`}
       </h6>
-
     </div>
   );
 };
