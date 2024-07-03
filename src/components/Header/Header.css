@@ -7,4 +7,5 @@
   margin-bottom: 1rem;
   width: 100%;
   backdrop-filter: blur(10px);
+  z-index: 999999;
 }
