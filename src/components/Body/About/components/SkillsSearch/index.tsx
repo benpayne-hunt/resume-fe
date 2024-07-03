@@ -38,7 +38,7 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
   const handleClick = (): CodeData => {
     console.log('CodeSightButton');
     // call api for code snippets
-    //
+
     // mocked
     return { language: 'tsx', code: 'const test = 1;' };
   };
