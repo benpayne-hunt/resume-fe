@@ -9,7 +9,7 @@ type Props = {
 
 const ActionButton = ({ text, onClick }: Props): ReactElement => {
   return (
-    <div className="TextButton" onClick={onClick}>
+    <div className="ActionButton" onClick={onClick}>
       {text}
     </div>
   );
