@@ -1,0 +1,8 @@
+.TextButton {
+  display: flex;
+  cursor: pointer;
+}
+
+.TextButton:hover {
+  color: black;
+}
