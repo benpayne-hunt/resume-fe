@@ -17,14 +17,12 @@ const About = (): ReactElement => {
             src="https://media.licdn.com/dms/image/D4E03AQFnJnEqI7kTWA/profile-displayphoto-shrink_400_400/0/1689328946343?e=1725494400&v=beta&t=Z9F0yelfmMZ_nsJWXi6n9-QkijIB73tCS1dgNzvL-gs"
             alt="Ben Payne Hunt"
           />
-          <div>
+          <div className="About-text-container">
             <h1 className="About-title">Hi there 👋</h1>
             <h6 className="About-text">
-              I'm a Tech Lead with a passion for running effective, collaborative and fun teams that look to deliver value in every pull request we open 💪
+              I'm a Software Engineer with a passion for running effective, collaborative and fun teams that look to deliver value in every pull request we open 💪
             </h6>
-            <h6 className="About-text">
-              Currently helping high-growth, fast-paced startup Shift disrupt the logistics industry by building a tech powered digital marketplace 🚀
-            </h6>
+            <h6 className="About-text">Think I could be a good fit? Search a skill to see if it's a match 🚀</h6>
           </div>
         </div>
       </div>

@@ -41,11 +41,17 @@
   display: flex;
 }
 
+.About-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .About-title {
   display: flex;
   margin-left: 3vw;
   font-size: calc(10px + 2vmin);
   color: white;
+  max-height: 1vh;
 }
 
 .About-text {
@@ -57,4 +63,5 @@
   text-wrap: wrap;
   min-width: 10vw;
   max-width: 45vw;
+  max-height: 0.5vh;
 }
