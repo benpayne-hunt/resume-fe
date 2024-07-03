@@ -9,8 +9,7 @@ type Props = {
 };
 
 const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): Skill[] => {
-    console.log(event.target.value);
+  const searchSkills = (): Skill[]|[] => {
     return [{
       name: 'JavaScript',
       experienceYears: 5,
@@ -18,15 +17,27 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
     }]
   };
 
-  const handleBlur = (): void => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): Skill[]|[] => {
+    return searchSkills();
+  };
+
+  const handleFocus = (): void => {
     scrollTo();
+  };
+
+  const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>): Skill[]|[] => {
+    if (event.key === 'Enter') {
+      return searchSkills();
+    } else {
+      return [];
+    }
   };
 
   return (
     <>
       <h6 className="About-text">Think I could be a good fit? Search a skill to see if it's a match 🚀</h6>
       <div className="SkillsSearch">
-        <SearchBar onChange={handleChange} onBlur={handleBlur} placeholder="Search a skill your org needs!" />
+        <SearchBar onChange={handleChange} onFocus={handleFocus} onEnter={handleEnter} placeholder="Search a skill your org needs!" />
       </div>
     </>
   );
