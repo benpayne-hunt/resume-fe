@@ -1,6 +1,7 @@
 .SkillsSearch {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5vw;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  width: 100%;
+  max-width: 46vw;
 }
