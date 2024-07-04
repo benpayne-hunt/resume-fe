@@ -1,0 +1,9 @@
+.ImageBadge {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.Image {
+  border-radius: 50%;
+}

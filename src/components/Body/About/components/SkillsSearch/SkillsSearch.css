@@ -1,0 +1,14 @@
+.SkillsSearch {
+  display: flex;
+  margin-top: 1vh;
+  margin-left: 2vw;
+  width: 100%;
+  max-width: 46vw;
+}
+
+.SkillsSearch-codeSight {
+  display: flex;
+  z-index: 1;
+  margin-left: -1vw;
+  margin-top: -2vh;
+}

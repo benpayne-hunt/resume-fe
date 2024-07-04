@@ -1,6 +1,11 @@
 .App-header {
+  position: fixed;
   max-height: 10vh;
   display: flex;
   color: white;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 999999;
 }
