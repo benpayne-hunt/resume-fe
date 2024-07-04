@@ -5,6 +5,7 @@ export const callNode = async (method: Method, route: string): Promise<any> => {
     method,
     headers: {
       "Content-Type": "application/json",
+      mode: "cors",
     },
   };
 
