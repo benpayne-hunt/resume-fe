@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 
-import './App.css';
 import Body from './components/Body';
 import Header from './components/Header';
+import './App.css';
 
 const App = (): ReactElement => {
   return (
