@@ -6,7 +6,7 @@ import { CodeData } from '../../../types/codeData';
 import './CodeSightButton.css';
 
 type Props = {
-  onClick: () => CodeData;
+  onClick: () => Promise<CodeData>;
 }
 
 const CodeSightButton = ({ onClick }: Props): ReactElement => {
@@ -14,7 +14,8 @@ const CodeSightButton = ({ onClick }: Props): ReactElement => {
   const [codeData, setCodeData] = useState<CodeData>({ language: 'tsx', code: '' });
 
   const handleClick = (): void => {
-    setCodeData(onClick());
+    const response = onClick();
+    // setCodeData(response);
     setOpenPopup(!openPopup);
   };
 
