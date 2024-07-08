@@ -1,6 +1,6 @@
 import { Method } from "../../../types/methods";
 
-export const callNode = async (method: Method, route: string, body: object | null): Promise<any> => {
+export const callNode = async (method: Method, route: string, body?: object): Promise<any> => {
   const requestInfo = {
     method,
     headers: {

@@ -5,7 +5,7 @@ import "./SearchBar.css";
 
 type Props = {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus: () => void;
+  onFocus: (event: React.FocusEvent<HTMLInputElement>) => Promise<Skill[] | []>;
   onEnter: (event: React.KeyboardEvent<HTMLInputElement>) => Promise<Skill[] | []>;
   placeholder: string;
 };
@@ -19,13 +19,28 @@ const SearchBar = ({ onChange, onFocus, onEnter, placeholder }: Props): ReactEle
     onChange(event);
   };
 
+  const handleFocus = async (event: React.FocusEvent<HTMLInputElement>): Promise<void> => {
+    setResults(await onFocus(event));
+  };
+
+  const handleBlur = async (event: React.FocusEvent<HTMLInputElement>): Promise<void> => {
+    setResults([]);
+  };
+
   const handleEnter = async (event: React.KeyboardEvent<HTMLInputElement>): Promise<void> => {
     setResults(await onEnter(event));
   };
 
   return (
     <div className="SearchBar">
-      <input type="text" placeholder={placeholder} onChange={handleChange} onFocus={onFocus} onKeyDown={handleEnter} />
+      <input
+        type="text"
+        placeholder={placeholder}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onKeyDown={handleEnter}
+      />
       {results.length > 0 ? (
         <div className="SearchBar-results">
           {results.map((result, index) => (

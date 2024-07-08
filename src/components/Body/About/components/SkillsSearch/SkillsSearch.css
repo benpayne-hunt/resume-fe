@@ -9,6 +9,6 @@
 .SkillsSearch-codeSight {
   display: flex;
   z-index: 1;
-  margin-left: -1vw;
+  margin-left: -1;
   margin-top: -2vh;
 }
