@@ -41,7 +41,7 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
   const handleClick = async (): Promise<CodeData> => {
     console.log("CodeSightButton");
 
-    return await callAPI("node", "");
+    return await callAPI("node", "code-sight/skills-search");
   };
 
   return (
