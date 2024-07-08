@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
-import Body from './components/Body';
-import Header from './components/Header';
-import './App.css';
+import Body from "./components/Body";
+import Header from "./components/Header";
+import "./App.css";
 
 const App = (): ReactElement => {
   return (
@@ -11,6 +11,6 @@ const App = (): ReactElement => {
       <Body />
     </div>
   );
-}
+};
 
 export default App;

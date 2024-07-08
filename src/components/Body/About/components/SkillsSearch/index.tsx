@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 
 import CodeSightButton from "../../../../../widgets/Buttons/CodeSightButton";
 import SearchBar from "../../../../../widgets/SearchBar";
@@ -12,27 +12,23 @@ type Props = {
 };
 
 const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
-  const searchSkills = (): Skill[] | [] => {
-    return [
-      {
-        name: "JavaScript",
-        experienceYears: 5,
-        experienceLevel: "Production",
-      },
-    ];
+  const [searchValue, setSearchValue] = useState<string>("");
+
+  const searchSkills = async (value: string): Promise<Skill[] | []> => {
+    return await callAPI("node", "skill", { name: value }, "POST");
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): Skill[] | [] => {
-    return searchSkills();
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setSearchValue(event.target.value);
   };
 
   const handleFocus = (): void => {
     scrollTo();
   };
 
-  const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>): Skill[] | [] => {
+  const handleEnter = async (event: React.KeyboardEvent<HTMLInputElement>): Promise<Skill[] | []> => {
     if (event.key === "Enter") {
-      return searchSkills();
+      return await searchSkills(searchValue);
     } else {
       return [];
     }
@@ -41,7 +37,7 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
   const handleClick = async (): Promise<CodeData> => {
     console.log("CodeSightButton");
 
-    return await callAPI("node", "code-sight/skills-search");
+    return await callAPI("node", "code-sight/skills-search", {});
   };
 
   return (
