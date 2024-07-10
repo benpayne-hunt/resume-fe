@@ -22,8 +22,14 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
     setSearchValue(event.target.value);
   };
 
-  const handleFocus = (): void => {
+  const handleFocus = async (event: React.FocusEvent<HTMLInputElement>): Promise<Skill[] | []> => {
     scrollTo();
+
+    if (event.target.value === "") {
+      return await callAPI("node", "skills");
+    } else {
+      return [];
+    }
   };
 
   const handleEnter = async (event: React.KeyboardEvent<HTMLInputElement>): Promise<Skill[] | []> => {
@@ -35,8 +41,6 @@ const SkillsSearch = ({ scrollTo }: Props): ReactElement => {
   };
 
   const handleClick = async (): Promise<CodeData> => {
-    console.log("CodeSightButton");
-
     return await callAPI("node", "code-sight/skills-search", {});
   };
 
